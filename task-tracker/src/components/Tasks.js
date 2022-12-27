@@ -16,7 +16,7 @@ import Task from "./Task";
 //     }
 // ]
 
-const Tasks = ({ tasks, onDelete }) => {
+const Tasks = ({ tasks, onDelete, onToggle }) => {
   //remember state is immutable
   //   setTasks([...tasks, {}])
   return (
@@ -25,7 +25,7 @@ const Tasks = ({ tasks, onDelete }) => {
       {/* {tasks.map((task) => <h3 key = {task.id}>{task.text}</h3>)} */}
       {/* mapping over singleTask component */}
       {tasks.map((task) => ( 
-        <Task key={task.id} task={task} onDelete={onDelete} />
+        <Task key={task.id} task={task} onDelete={onDelete} onToggle = {onToggle} />
       ))}
     </div>
   );
